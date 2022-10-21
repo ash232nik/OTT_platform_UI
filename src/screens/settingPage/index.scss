@@ -1,0 +1,65 @@
+.settingContainer {
+  background-color: white;
+  width: 45vw;
+  border-radius: 5px;
+  height: 70vh;
+  padding: 5%;
+  position: relative;
+  .headingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .close-icon {
+    // position: absolute;
+    // top: 20px;
+    // right: 20px;
+    cursor: pointer;
+  }
+  .heading {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .BoxContainer {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(232, 230, 230);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    .boxContent {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .DropDownContainer {
+    margin-top: 15px;
+    .Heading {
+      font-weight: bold;
+      color: gray;
+    }
+    .dropdown {
+      width: 100%;
+      border: 1px solid rgb(232, 230, 230);
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+select {
+  // width: 268px;
+  // padding: 5px;
+  // font-size: 16px;
+  // line-height: 1;
+  // border: 0;
+  // border-radius: 5px;
+  // height: 34px;
+  background: url("../../assets/images/down_b_arrow_icon.png") no-repeat right;
+  -webkit-appearance: none;
+  background-position: calc(100% - 0.75rem) center;
+}

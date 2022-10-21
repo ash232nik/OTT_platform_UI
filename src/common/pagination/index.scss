@@ -1,0 +1,10 @@
+.paginationContainer {
+  display: flex;
+  .subContainer {
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px rgb(210, 210, 210) solid;
+    margin: 0 1px;
+  }
+}

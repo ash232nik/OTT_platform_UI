@@ -1,0 +1,41 @@
+.dotMenuContainer {
+  position: relative;
+  .menuContainer {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: -2rem;
+    outline: 1px solid #000;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  .checkBox {
+    display: none;
+  }
+  #dotMenuCheck:hover + .menuContainer {
+    display: block;
+  }
+
+  .checkBox.active + .menuContainer {
+    display: block;
+  }
+  .menuContainer:active {
+    display: block;
+  }
+
+  [id^="dotMenuCheck"]:checked + .menuContainer {
+    display: block;
+  }
+}
+
+.dotMenuContainer:focus-within {
+  .menuContainer {
+    display: block;
+  }
+}
+
+// .dotMenuContainer:hover {
+//   .menuContainer {
+//     display: block;
+//   }
+// }

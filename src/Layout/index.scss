@@ -1,0 +1,15 @@
+.mainContainer {
+  .topNavBar {
+    height: 8vh;
+    padding: 0 20px;
+    background-color: white;
+    box-shadow: "0 1px 2px rgb(56,65,74 / 15%)";
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .iconsContainer {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  // margin-bottom: 5%;
+  padding: 4rem 0;
+  .uploadButtonContainer {
+    display: flex;
+    width: 80vw;
+    justify-content: flex-end;
+    .uploadButton {
+      border-radius: 5px;
+      font-weight: bold;
+      width: 10rem;
+      padding: 10px 0;
+      font-size: 16px;
+      color: white;
+      background-color: #377dff;
+      border: none;
+    }
+  }
+  .tableContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .mainTable {
+      margin-top: 10px;
+      background-color: white;
+      box-shadow: 0 0px 3px -2px #384105;
+      width: 80vw;
+      border-collapse: collapse;
+      border: none;
+
+      th {
+        text-align: left;
+        padding: 1rem 1.5rem;
+        background-color: rgb(243, 242, 242);
+        border-top: 1px solid rgb(222, 221, 221);
+        border-bottom: 1px solid rgb(222, 221, 221);
+      }
+      td {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgb(243, 242, 242);
+        border-bottom: 1px solid rgb(243, 242, 242);
+      }
+      .popUp {
+        position: absolute;
+        background-color: white;
+
+        width: 5rem;
+        left: 2.5rem;
+        text-align: center;
+        box-shadow: 0 0px 3px -2px #384105;
+        .popUpList {
+          cursor: pointer;
+          border-bottom: 1px solid rgb(234, 233, 233);
+          padding: 6px 10px;
+        }
+      }
+    }
+    .paginationContain {
+      margin-top: 5px;
+      display: flex;
+      justify-content: flex-end;
+      width: 80vw;
+    }
+  }
+}
