@@ -1,11 +1,24 @@
 .profileContainer {
   background-color: white;
   padding: 5% 5% 8%;
-  width: 45vw;
+  width: 50vw;
   height: 70vh;
   border-radius: 5px;
   position: relative;
   overflow-y: scroll;
+  .Heading {
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .fullWidth {
+    width: 100%;
+  }
+  .halfWidth {
+    width: 50%;
+  }
   .close-icon {
     position: absolute;
     top: 20px;
@@ -13,14 +26,15 @@
     cursor: pointer;
   }
   .flexClass {
-    display: flex;
+    // display: flex;
     margin-bottom: 1rem;
   }
   .flexLeftClass {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 5px;
   }
   .photoContainer {
     display: flex;
@@ -44,29 +58,72 @@
         width: 100%;
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 5px;
       }
     }
   }
   .detailsContainer {
     margin-top: 1rem;
+    width: 90%;
+    position: relative;
     .BoxContainer {
-      border: 1px solid black;
-      border-radius: 10px;
+      // border: 1px solid black;
+      border-radius: 5px;
       padding: 10px;
       //   font-size: 18px;
       //   font-weight: 600;
-      width: 59%;
+      width: 100%;
+      background-color: #ebebeb;
     }
     .addressBox {
       display: flex;
       justify-content: space-between;
-      width: 82%;
+      width: 100%;
       margin-bottom: 1rem;
       input {
-        width: 45%;
+        // width: 45%;
         padding: 10px 5px;
-        border-radius: 10px;
+        border-radius: 5px;
+        border-width: 1px;
       }
+    }
+    .legalContainer {
+      .legalCheckBoxContainer {
+        display: flex;
+        gap: 2%;
+        margin-bottom: 10px;
+        div {
+          display: flex;
+          align-items: center;
+        }
+        .checkBoxContainer {
+          display: flex;
+          a {
+            color: black;
+            text-decoration: none;
+          }
+          // align-items: flex-start;
+        }
+        .legalBox {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .updateButtonContainer {
+    display: flex;
+    // width: 80vw;
+    justify-content: flex-end;
+    margin-top: 5%;
+    .updateButton {
+      border-radius: 5px;
+      font-weight: bold;
+      width: 10rem;
+      padding: 10px 0;
+      font-size: 16px;
+      color: white;
+      background-color: #377dff;
+      border: none;
     }
   }
 }

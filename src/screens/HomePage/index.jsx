@@ -7,6 +7,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { objectUtils } from "../../utils";
 import Modal from "../../common/modal";
+import Button from "../../common/button";
+import DotMenu from "../../common/dotMenu";
 
 const HomePage = () => {
   const [pageNo, setPageNo] = useState(1);
@@ -46,18 +48,25 @@ const HomePage = () => {
   const handleUpload = () => {
     setUploadModal(true);
   };
+  window.onclick = function (e) {
+    if (!e.target.matches(".dropdownBtn")) {
+      setPopup(false);
+    }
+  };
   return (
     <div className="homeContainer">
       <div className="uploadButtonContainer">
-        <button className="uploadButton" onClick={handleUpload}>
+        <Button title={"Upload"} backgroundColor=" #377dff" color="white" />
+        {/* <button className="uploadButton" onClick={handleUpload}>
           Upload
-        </button>
+        </button> */}
       </div>
       <div className="tableContainer">
         <table className="mainTable">
           <thead>
             <tr>
               <th>Name</th>
+              <th>IMDB</th>
               <th>Released Year</th>
               <th>Duration</th>
               <th>Uploaded On</th>
@@ -70,18 +79,23 @@ const HomePage = () => {
             {data.map((item) => {
               return (
                 <tr>
-                  <td>{item.name}</td>
-                  <td>{item.releasedYear}</td>
-                  <td>{item.duration}</td>
-                  <td>{item.uploadedOn}</td>
-                  <td>{item.language}</td>
-                  <td>{item.genre}</td>
+                  <td width={"300px"}>{item?.name ?? "--"}</td>
+                  <td width={"100px"}>{item?.imbd_rating ?? "--"}</td>
+                  <td width={"400px"}>{item?.released_year ?? "--"}</td>
+                  <td width={"100px"}>{item?.duration ?? "--"}</td>
+                  <td width={"300px"}>{item?.uploadedOn ?? "--"}</td>
+                  <td width={"100px"}>{item?.language ?? "--"}</td>
+                  <td width={"200px"}>
+                    {item?.genre.length > 0 &&
+                      item?.genre.map((item) => item + ",")}
+                  </td>
                   <td style={{ position: "relative" }}>
                     <img
                       src={More}
                       alt="icon"
                       style={{ width: "15px", cursor: "pointer" }}
                       onClick={() => handlePopUp(item.id)}
+                      className="dropdownBtn"
                     />
                     {popup && (
                       <div
@@ -94,7 +108,7 @@ const HomePage = () => {
                         <div className="popUpList">Delete</div>
                       </div>
                     )}
-                    {/* <DotMenu>
+                    {/* <DotMenu key={index} id={item.id} selectedId>
                       <div className="popUpList">Edit</div>
                       <div className="popUpList">Delete</div>
                     </DotMenu> */}

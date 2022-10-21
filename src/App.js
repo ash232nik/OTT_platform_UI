@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./screens/login";
 import HomePage from "./screens/HomePage";
 import Layout from "./Layout";
+import "./sass/_tags.scss";
 
 function ProtectedRoute({ children }) {
   if (!localStorage.getItem("userAccess")) {

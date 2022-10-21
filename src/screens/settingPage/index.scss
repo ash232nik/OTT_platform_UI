@@ -1,6 +1,6 @@
 .settingContainer {
   background-color: white;
-  width: 45vw;
+  width: 50vw;
   border-radius: 5px;
   height: 70vh;
   padding: 5%;
@@ -12,9 +12,9 @@
     margin-bottom: 25px;
   }
   .close-icon {
-    // position: absolute;
-    // top: 20px;
-    // right: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
   }
   .heading {

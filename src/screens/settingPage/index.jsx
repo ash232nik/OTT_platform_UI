@@ -6,16 +6,16 @@ import closeIcon from "../../assets/images/close.png";
 const SettingPage = ({ close }) => {
   return (
     <div className="settingContainer">
+      <img
+        className="close-icon"
+        src={closeIcon}
+        alt="close-icon"
+        onClick={close}
+        role="presentation"
+        style={{ width: "15px" }}
+      />
       <div className="headingContainer">
         <div className="heading">Setting</div>
-        <img
-          className="close-icon"
-          src={closeIcon}
-          alt="close-icon"
-          onClick={close}
-          role="presentation"
-          style={{ width: "15px" }}
-        />
       </div>
       <div className="BoxContainer">
         <div className="boxContent">Notification</div>
