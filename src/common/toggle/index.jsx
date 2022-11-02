@@ -1,12 +1,18 @@
 import React from "react";
 import "./index.scss";
 
-const ToggleSwitch = ({ label }) => {
+const ToggleSwitch = ({ label, disabled }) => {
   return (
     <div className="container">
       {/* {label}{" "} */}
       <div className="toggle-switch">
-        <input type="checkbox" className="checkbox" name={label} id={label} />
+        <input
+          type="checkbox"
+          className="checkbox"
+          name={label}
+          id={label}
+          disabled={!disabled}
+        />
         <label className="label" htmlFor={label}>
           <span className="inner" />
           <span className="switch" />

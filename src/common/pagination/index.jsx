@@ -36,12 +36,17 @@ const Pagination = ({ pageNo = 1, limit = 10, total = 14, result = null }) => {
   return (
     limit < total && (
       <div className="paginationContainer">
-        <div
+        <button
           onClick={() => (currentPage > 1 ? updatePage(currentPage - 1) : null)}
           className="subContainer"
+          disabled={currentPage === 1 ? true : false}
+          style={{
+            backgroundColor: currentPage === 1 ? "#e0e0e0" : "",
+            cursor: currentPage === 1 ? "no-drop" : "",
+          }}
         >
-          <img src={Prev} style={{ width: "15px" }} />
-        </div>
+          <img src={Prev} style={{ width: "12px" }} />
+        </button>
 
         {array?.length !== 0 &&
           array.map((item) => {
@@ -59,14 +64,19 @@ const Pagination = ({ pageNo = 1, limit = 10, total = 14, result = null }) => {
             );
           })}
 
-        <div
+        <button
           onClick={() =>
             currentPage < array.length ? updatePage(currentPage + 1) : null
           }
           className="subContainer"
+          disabled={currentPage === array.length ? true : false}
+          style={{
+            backgroundColor: currentPage === array.length ? "#e0e0e0" : "",
+            cursor: currentPage === array.length ? "no-drop" : "",
+          }}
         >
-          <img src={Next} style={{ width: "15px" }} />
-        </div>
+          <img src={Next} style={{ width: "12px" }} />
+        </button>
       </div>
     )
   );

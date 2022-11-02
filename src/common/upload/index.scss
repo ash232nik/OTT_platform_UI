@@ -1,0 +1,51 @@
+.uploadContainer {
+  width: 50vw;
+  height: 70vh;
+  background-color: white;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  flex-direction: column;
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .dataContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 45vw;
+    height: 50vh;
+    // border: 1px dashed;
+    border-radius: 5px;
+  }
+  .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+  .text {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+    color: gray;
+  }
+}

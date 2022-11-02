@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormConst } from "../../constant/form";
 import "./index.scss";
-import { User } from "../../data/user";
+import { UserData } from "../../data/user";
+import { AuthContext } from "../../context";
+import AssingPermission from "../../context/data/assignPermission";
 
 const Login = () => {
+  const appContext = useContext(AuthContext);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const handleLogin = () => {
-    const user = User.user.find(
-      (item) => item.email === email && item.password === password
+    const user = UserData.user.find(
+      (item) => item.username === email && item.password === password
     );
     if (user) {
       setError(false);
-      localStorage.setItem("userAccess", true);
+      localStorage.setItem("user", user.role);
+      AssingPermission({ context: appContext, user: user });
       navigate("/");
     } else {
       setError(true);

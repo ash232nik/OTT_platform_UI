@@ -1,8 +1,12 @@
+$top-bar-height: 8vh;
+// $filter-icon: contrast(200%) drop-shadow(16px 16px 20px blue) grayscale(50%)
+//   invert(75%) saturate(30%) sepia(60%);
+$filter-icon: sepia(100%) hue-rotate(190deg) saturate(500%);
 .mainContainer {
   .topNavBar {
-    height: 8vh;
+    height: $top-bar-height;
     padding: 0 20px;
-    background-color: white;
+    background-color: #fafbfc;
     box-shadow: "0 1px 2px rgb(56,65,74 / 15%)";
     display: flex;
     align-items: center;
@@ -10,6 +14,89 @@
     .iconsContainer {
       display: flex;
       gap: 1rem;
+      .popUp {
+        position: absolute;
+        background-color: white;
+
+        width: 5rem;
+        right: 20px;
+        top: 3.2rem;
+        text-align: left;
+        box-shadow: 0 0px 3px -2px #384105;
+        border-radius: 5px;
+
+        .popUpList {
+          font-size: 14px;
+          cursor: pointer;
+          // border-bottom: 1px solid rgb(234, 233, 233);
+          padding: 6px 10px;
+        }
+      }
+    }
+  }
+  .adminLayout {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 10rem auto;
+    .sideNavBar {
+      // height: calc(100vh - $top-bar-height);
+      height: calc(100vh - 8vh);
+      box-shadow: 0 0px 3px -2px #384105;
+      background-color: #fafbfc;
+      display: flex;
+      flex-direction: column;
+      .sideBarList {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        display: flex;
+        gap: 5%;
+        transition: none;
+        color: black;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        span {
+          transition: none;
+        }
+
+        img {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+      .activeSideBarList {
+        background-color: #e6ecff;
+        color: #0545f5;
+        cursor: pointer;
+        font-weight: 600;
+        img {
+          // filter: brightness(0) invert(1);
+          filter: $filter-icon;
+        }
+      }
+      .sideBarList:hover {
+        background-color: #e6ecff;
+        color: #0545f5;
+        cursor: pointer;
+        font-weight: 600;
+        img {
+          filter: $filter-icon;
+        }
+      }
+    }
+    .pageMainViewContainer {
+      // height: calc(100vh - $top-bar-height);
+      height: calc(100vh - 8vh);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
   }
 }

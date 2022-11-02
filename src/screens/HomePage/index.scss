@@ -3,11 +3,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 3%;
   // margin-bottom: 5%;
-  padding: 4rem 0;
+
   .uploadButtonContainer {
     display: flex;
-    width: 80vw;
+    width: 100%;
     justify-content: flex-end;
     .uploadButton {
       border-radius: 5px;
@@ -28,10 +29,15 @@
       margin-top: 10px;
       background-color: white;
       box-shadow: 0 0px 3px -2px #384105;
-      width: 80vw;
+      // width: 80vw;
       border-collapse: collapse;
       border: none;
-
+      .genreClass {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 200px;
+        text-overflow: ellipsis;
+      }
       th {
         text-align: left;
         padding: 1rem 1.5rem;
@@ -50,7 +56,7 @@
 
         width: 5rem;
         left: 2.5rem;
-        text-align: center;
+        text-align: left;
         box-shadow: 0 0px 3px -2px #384105;
         border-radius: 5px;
 
@@ -63,10 +69,10 @@
       }
     }
     .paginationContain {
-      margin-top: 5px;
+      margin-top: 15px;
       display: flex;
       justify-content: flex-end;
-      width: 80vw;
+      // width: 80vw;
     }
   }
 }

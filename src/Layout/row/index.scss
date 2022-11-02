@@ -1,0 +1,8 @@
+.rowLayoutContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 1rem;
+  column-gap: 2rem;
+}

@@ -1,0 +1,26 @@
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .mainTable {
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0px 3px -2px #384105;
+    // width: 80vw;
+    border-collapse: collapse;
+    border: none;
+
+    th {
+      text-align: left;
+      padding: 1rem 1.5rem;
+      background-color: rgb(243, 242, 242);
+      border-top: 1px solid rgb(222, 221, 221);
+      border-bottom: 1px solid rgb(222, 221, 221);
+    }
+    td {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid rgb(243, 242, 242);
+      border-bottom: 1px solid rgb(243, 242, 242);
+    }
+  }
+}

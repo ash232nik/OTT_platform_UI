@@ -6,7 +6,9 @@ const TextInput = ({
   type = "text",
   label,
   className,
+  value,
   width = "100%",
+  onChange,
 }) => {
   return (
     <div className="inputContainer" style={{ width: width }}>
@@ -15,6 +17,8 @@ const TextInput = ({
         placeholder={placeholder}
         type={type}
         className={`inputField ${className}`}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
