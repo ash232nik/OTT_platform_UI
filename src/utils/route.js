@@ -2,7 +2,7 @@ export const PUBLIC_ROUTE = {
   login: "/login",
 };
 const SIDEBAR_ROUTE = {
-  homePage: "/",
+  homePage: "/home",
   clients: "/clients",
   users: "/users",
   payment: "/payment",
@@ -10,7 +10,7 @@ const SIDEBAR_ROUTE = {
   settings: "/settings",
   approvals: "/approvals",
   upload: "/upload",
-  subscription: "/ssubscription",
+  subscription: "/subscription",
 };
 export const PRIVATE_ROUTE = {
   homePage: SIDEBAR_ROUTE.homePage,

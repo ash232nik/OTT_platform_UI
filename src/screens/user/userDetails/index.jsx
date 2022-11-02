@@ -48,39 +48,26 @@ const UserDetails = () => {
             onChange={(e) => handleChange(e, "mob")}
           />
           <TextInput
-            label={"Plan"}
-            value={clientData.plan}
+            label={"Email"}
+            value={clientData.email}
             className="inputWidth"
-            onChange={(e) => handleChange(e, "plan")}
+            onChange={(e) => handleChange(e, "email")}
           />
         </Row>
         <div className="clientProfileHead">Plans</div>
+
         <Row className="inputRowContainer">
-          <TextInput
-            label={"Name"}
-            value={clientData.name}
-            className="inputWidth"
-            onChange={(e) => handleChange(e, "name")}
-          />
-          <TextInput
-            label={"Place"}
-            value={clientData.place}
-            className="inputWidth"
-            onChange={(e) => handleChange(e, "place")}
-          />
-        </Row>
-        <Row className="inputRowContainer">
-          <TextInput
-            label={"Mobile"}
-            value={clientData.mob}
-            className="inputWidth"
-            onChange={(e) => handleChange(e, "mob")}
-          />
           <TextInput
             label={"Plan"}
             value={clientData.plan}
             className="inputWidth"
             onChange={(e) => handleChange(e, "plan")}
+          />
+          <TextInput
+            label={"Expiry Date"}
+            value={clientData.exp}
+            className="inputWidth"
+            onChange={(e) => handleChange(e, "exp")}
           />
         </Row>
       </div>

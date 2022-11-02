@@ -18,7 +18,7 @@ export const UserData = {
         {
           content: "Dashboard",
           icon: Dashboard,
-          path: "/",
+          path: "/home",
         },
         {
           content: "Clients",
@@ -60,7 +60,7 @@ export const UserData = {
         {
           content: "Dashboard",
           icon: Dashboard,
-          path: "/",
+          path: "/home",
         },
         {
           content: "Upload",
@@ -92,7 +92,7 @@ export const UserData = {
         {
           content: "Dashboard",
           icon: Dashboard,
-          path: "/",
+          path: "/home",
         },
         {
           content: "Upload",

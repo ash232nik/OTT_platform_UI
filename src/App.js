@@ -10,6 +10,7 @@ import Approvals from "./screens/approvals";
 import Payment from "./screens/payment";
 import { useContext } from "react";
 import { AuthContext } from "./context";
+import UserImage from "../src/assets/images/user.png";
 import AssingPermission from "./context/data/assignPermission";
 import ProfilePage from "./screens/profilePage";
 import SettingPage from "./screens/settingPage";
@@ -48,7 +49,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path={login} element={<Login />} />{" "}
+      <Route path={login} exact element={<Login />} />{" "}
       <Route
         path={homePage}
         exact
@@ -116,7 +117,7 @@ function App() {
         exact
         element={
           <ProtectedRoute>
-            <ProfilePage />
+            <ProfilePage photo={UserImage} />
           </ProtectedRoute>
         }
       />

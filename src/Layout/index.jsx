@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
     {
       content: "Dashboard",
       icon: Dashboard,
-      path: "/",
+      path: "/home",
     },
     {
       content: "Clients",
@@ -143,7 +143,7 @@ const Layout = ({ children }) => {
             //   color: isActive ? "#fff" : "",
             //   background: isActive ? "#377dff" : "",
             // })}
-            end
+            // end
             // activeStyle={{
             //   fontWeight: "bold",
             //   color: "red",

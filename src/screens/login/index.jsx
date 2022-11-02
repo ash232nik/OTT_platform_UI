@@ -21,7 +21,7 @@ const Login = () => {
       setError(false);
       localStorage.setItem("user", user.role);
       AssingPermission({ context: appContext, user: user });
-      navigate("/");
+      navigate("/home");
     } else {
       setError(true);
     }

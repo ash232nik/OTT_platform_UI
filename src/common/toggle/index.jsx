@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 
-const ToggleSwitch = ({ label, disabled }) => {
+const ToggleSwitch = ({ label }) => {
   return (
     <div className="container">
       {/* {label}{" "} */}
@@ -11,7 +11,7 @@ const ToggleSwitch = ({ label, disabled }) => {
           className="checkbox"
           name={label}
           id={label}
-          disabled={!disabled}
+          // disabled={!disabled}
         />
         <label className="label" htmlFor={label}>
           <span className="inner" />

@@ -12,8 +12,11 @@ const ClientDetails = () => {
     name: "",
     place: "",
     mob: 0,
+    Address: "",
+    limit: "",
     plan: "",
     exp: "",
+    amount: "",
   };
   const [clientData, setClientData] = useState(result);
 
@@ -40,10 +43,10 @@ const ClientDetails = () => {
             onChange={(e) => handleChange(e, "place")}
           />
         </Row>
-        <Row className="inputRowContainer">
+        {/* <Row className="inputRowContainer">
           <TextInput
-            label={"Mobile"}
-            value={clientData.mob}
+            label={"Daily Limit"}
+            value={clientData.limit}
             className="inputWidth"
             onChange={(e) => handleChange(e, "mob")}
           />
@@ -53,9 +56,9 @@ const ClientDetails = () => {
             className="inputWidth"
             onChange={(e) => handleChange(e, "plan")}
           />
-        </Row>
+        </Row> */}
         <div className="clientProfileHead">Plans</div>
-        <Row className="inputRowContainer">
+        {/* <Row className="inputRowContainer">
           <TextInput
             label={"Name"}
             value={clientData.name}
@@ -68,8 +71,8 @@ const ClientDetails = () => {
             className="inputWidth"
             onChange={(e) => handleChange(e, "place")}
           />
-        </Row>
-        <Row className="inputRowContainer">
+        </Row> */}
+        {/* <Row className="inputRowContainer">
           <TextInput
             label={"Mobile"}
             value={clientData.mob}
@@ -81,6 +84,35 @@ const ClientDetails = () => {
             value={clientData.plan}
             className="inputWidth"
             onChange={(e) => handleChange(e, "plan")}
+          />
+        </Row> */}
+        <Row className="inputRowContainer">
+          <TextInput
+            label={"Daily Limit"}
+            value={clientData.limit}
+            className="inputWidth"
+            onChange={(e) => handleChange(e, "mob")}
+          />
+          <TextInput
+            label={"Plan"}
+            value={clientData.plan}
+            className="inputWidth"
+            onChange={(e) => handleChange(e, "plan")}
+          />
+        </Row>
+        <Row className="inputRowContainer">
+          <TextInput
+            label={"Expiry Date"}
+            value={clientData.exp}
+            className="inputWidth"
+            onChange={(e) => handleChange(e, "mob")}
+          />
+          {/* <div></div> */}
+          <TextInput
+            label={"Amount"}
+            value={clientData.amount}
+            className="inputWidth"
+            onChange={(e) => handleChange(e, "amount")}
           />
         </Row>
       </div>

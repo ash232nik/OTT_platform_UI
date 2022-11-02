@@ -33,35 +33,44 @@ const ClientListPage = () => {
       dataIndex: "exp",
       key: "exp",
     },
+    {
+      title: "Amount",
+      dataIndex: "amount",
+      key: "amount",
+    },
   ];
   const clientData = [
     {
       name: "Jack",
-      place: "Pune",
+      place: "Mysore",
       limit: "15GB",
       plan: "2 months",
       exp: "11-02-23",
+      amount: 2000,
     },
     {
       name: "John",
-      place: "Pune",
+      place: "Bangalore",
       limit: "20GB",
       plan: "6 months",
       exp: "12-02-23",
+      amount: 3000,
     },
     {
       name: "Daniel",
-      place: "Pune",
+      place: "Raipur",
       limit: "25GB",
       plan: "5 months",
       exp: "10-05-23",
+      amount: 2000,
     },
     {
       name: "Mickie",
-      place: "Pune",
+      place: "Jaipur",
       limit: "15GB",
       plan: "3 months",
       exp: "11-12-22",
+      amount: 2500,
     },
     {
       name: "Joe",
@@ -69,6 +78,7 @@ const ClientListPage = () => {
       limit: "20GB",
       plan: "2 months",
       exp: "08-12-22",
+      amount: 3000,
     },
   ];
   const handleDetails = (value, index) => {
